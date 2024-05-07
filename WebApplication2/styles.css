@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    user-select: none;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.homepage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    user-select: none;
+}
+
+.homepage button, .album-picture-page-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.login-signup {
+    display: flex-start;
+    margin-top: 15px;
+    width: 400px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.login-signup label,
+.login-signup input {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.album-slider {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-item {
+    position: relative;
+    display: inline-block;
+}
+
+.slider-item img {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.picture-page-picture {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.slider-item:hover .overlay {
+    opacity: 1;
+}
+
+.login-signup-button, .album-picture-page-button, .create-album-button {
+    padding: 10px 70px;
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #007BFF;
+    cursor: pointer;
+    margin-inline: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.album-picture-page-button:hover, .login-signup-button:hover, .create-album-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.login-signup-button {
+    user-select: none;
+    margin-top: 20px;
+}
+
+.user-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-grid th {
+    background-color:#885;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.user-grid td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.user-grid tr {
+    background-color: #f2f2f2;
+}
+
+.user-grid tr:hover {
+    background-color: #ddd;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -10%);
+  user-select: none;
+}
+
+#image-track >.image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
